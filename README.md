@@ -46,10 +46,10 @@ For more details on the exact features used in the metalearner, refer to `join_s
 ## Authors
 
 * **Jasmine Seah** - [jasmineseah-17](https://github.com/jasmineseah-17)
-* **Kaustubh Jagtap** - [jasmineseah-17](https://github.com/nicklausong)
+* **Kaustubh Jagtap** - [ksjagtap](https://github.com/ksjagtap)
 * **Nicklaus Ong Jing Xue** - [nicklausong](https://github.com/nicklausong)
 * **Sung Zheng Jie** - [zhengjiesung](https://github.com/zhengjiesung)
-* **Vienna Wong** - [Viennawongjw](https://github.com/Viennawongjw)
+* **Vienna Wong** - [viennawongjw](https://github.com/Viennawongjw)
 
 ## License
 
