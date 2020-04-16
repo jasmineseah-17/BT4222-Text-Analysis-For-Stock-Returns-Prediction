@@ -1,0 +1,22 @@
+1. Instructions to extract and scrape Amazon Apple Reviews:
+
+
+A. Extract all links related to Apple from Amazon and save as aapl_links.csv
+	i. run this line: scrapy runspider Extraction/Extraction/spiders/apple_products_links.py -o apple_links.csv
+
+B. Extract all Apple reviews from all the links in aapl_links.csv and save as aapl_amazon.csv
+	ii. run this line: scrapy runspider Extraction/Extraction/spiders/apple_products_review.py -o aapl_amazon.csv
+
+Note: files will be save in current directory
+
+
+2. Instructions to retrieve AWS Public Datasets (link: https://s3.amazonaws.com/amazon-reviews-pds/readme.html)
+
+
+A. Create an AWS account to get AWS Command Line Interface (free)
+
+B. Follow the steps in https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html to install and use the AWS CLI
+
+C. Run this in terminal to get Apple related products and its reviews: aws s3 cp s3://amazon-reviews-pds/tsv/amazon_reviews_us_Wireless_v1_00.tsv.gz .
+
+D. Save the file as aapl_public.tsv

@@ -1,0 +1,31 @@
+Symbol,Security,SEC filings,GICS Sector,GICS Sub Industry,Headquarters Location,Date first added,CIK,Founded
+MMM,3M Company,reports,Industrials,Industrials,"St. Paul, Minnesota",,66740,1902
+AXP,American Express Co,reports,Financials,Financials,"New York, New York",30/6/1976,4962,1850
+AAPL,Apple Inc.,reports,Information Technology,Information Technology,"Cupertino, California",30/11/1982,320193,1977
+BA,Boeing Company,reports,Industrials,Industrials,"Chicago, Illinois",,12927,1916
+CAT,Caterpillar Inc.,reports,Industrials,Industrials,"Deerfield, Illinois",,18230,1925
+CVX,Chevron Corp.,reports,Energy,Energy,"San Ramon, California",,93410,1879
+CSCO,Cisco Systems,reports,Information Technology,Information Technology,"San Jose, California",1/12/1993,858877,
+KO,Coca-Cola Company,reports,Consumer Staples,Consumer Staples,"Atlanta, Georgia",,21344,1886
+DOW,Dow Inc.,reports,Materials,Materials,"Midland, Michigan",1/4/2019,1751788,2019
+XOM,Exxon Mobil Corp.,reports,Energy,Energy,"Irving, Texas",,34088,1999
+GS,Goldman Sachs Group,reports,Financials,Financials,"New York, New York",22/7/2002,886982,
+HD,Home Depot,reports,Consumer Discretionary,Consumer Discretionary,"Atlanta, Georgia",31/3/1988,354950,
+INTC,Intel Corp.,reports,Information Technology,Information Technology,"Santa Clara, California",31/12/1976,50863,
+IBM,International Business Machines,reports,Information Technology,Information Technology,"Armonk, New York",,51143,1911
+JNJ,Johnson & Johnson,reports,Health Care,Health Care,"New Brunswick, New Jersey",30/6/1973,200406,1886
+JPM,JPMorgan Chase & Co.,reports,Financials,Financials,"New York, New York",30/6/1975,19617,
+MCD,McDonald's Corp.,reports,Consumer Discretionary,Consumer Discretionary,"Chicago, Illinois",30/6/1970,63908,1940
+MRK,Merck & Co.,reports,Health Care,Health Care,"Kenilworth, New Jersey",,310158,1891
+MSFT,Microsoft Corp.,reports,Information Technology,Information Technology,"Redmond, Washington",1/6/1994,789019,1975
+NKE,Nike,reports,Consumer Discretionary,Consumer Discretionary,"Washington County, Oregon",30/11/1988,320187,
+PFE,Pfizer Inc.,reports,Health Care,Health Care,"New York, New York",,78003,1849
+PG,Procter & Gamble,reports,Consumer Staples,Consumer Staples,"Cincinnati, Ohio",,80424,1837
+TRV,The Travelers Companies Inc.,reports,Financials,Financials,"New York, New York",21/8/2002,86312,
+UNH,United Health Group Inc.,reports,Health Care,Health Care,"Minnetonka, Minnesota",1/7/1994,731766,
+UTX,United Technologies,reports,Industrials,Industrials,"Hartford, Connecticut",,101829,
+VZ,Verizon Communications,reports,Communication Services,Communication Services,"New York, New York",30/11/1983,732712,
+V,Visa Inc.,reports,Information Technology,Information Technology,"San Francisco, California",21/12/2009,1403161,
+WMT,Walmart,reports,Consumer Staples,Consumer Staples,"Bentonville, Arkansas",31/8/1982,104169,
+WBA,Walgreens Boots Alliance,reports,Consumer Staples,Consumer Staples,"Deerfield, Illinois",31/12/1979,1618921,2014
+DIS,The Walt Disney Company,reports,Communication Services,Communication Services,"Burbank, California",30/6/1976,1001039,
