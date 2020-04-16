@@ -18,13 +18,33 @@ These instructions will get you a copy of the project up and running on your loc
 3. The data - Download everything in this <a href="http://recordit.co/" target="_blank">OneDrive folder</a>.
 
 ### Install the Required Packages and Lexicons
-1. Use `requirement.txt` to install the correct versions of the required Python libraries to run the Python code we have written.
-2. You will also need to download the following lexicons which we used to perform NLP. Simply run the code chunk below in your python notebook/ script.
+1. Set up virtual environment by entering the following code in the terminal client:
+```
+conda create -n yourenvname python=3.6 anaconda
+``` 
+Then press `y` to proceeed. This will install the Python version, and all the associated anaconda packaged libraries at `path_to_your_anaconda_location/anaconda/envs/yourenvname`.
+Activate the virtual environment as follows:
+```
+conda activate yourenvname
+```
+Then, use `requirement.txt` to install the correct versions of the required Python libraries to run the Python code we have written.
+```
+pip install -r requirements.txt
+```
+2. You will need to download the following lexicons which we used to perform NLP. Simply run the code chunk below in your python notebook/ script.
 ``` 
 import nltk
-nltk.download('punkt')
 nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('words')
 nltk.download('vader_lexicon')
+```
+3. You will also need to download the following spacy model either on your python notebook/ script.
+```
+import spacy
+!python -m spacy download en_core_web_sm
 ```
 
 ## Running the Codes
