@@ -52,12 +52,12 @@ import spacy
 This is a 2-part project - (i) Obtain predictions from individual data sources for the 25 companies, (ii) Combine these predictions with technical and seasonal indicators for the final signal of the daily returns of any company.
 
 ### Individual Model for each Data Source
-The 5 data sources (10K/Q, 8K, financial news, tweets, and Amazon reviews) individually predict the daily returns of the 25 DJIA companies. File naming conventions are standardised across all files. For more details, refer to this documentation here. To build the model, we follow the steps in the Machine Learning Life Cycle, which include:
-1. Data Extraction via `extraction.py`
-2. Data Pre-processing via `cleaning.py`
-3. Exploratory Data Analysis via `model_building.ipynb`
-4. Feature Engineering via `model_building.ipynb`
-5. Model Building and Evaluation via `model_building.ipynb`
+The 5 data sources (10K/Q, 8K, financial news, tweets, and Amazon reviews) individually predict the daily returns of the 25 DJIA companies. File naming conventions are standardised across all files. For more details, refer to this documentation [here](https://docs.google.com/document/d/1sGOlJ3bLdQbcuVzejfeYV9F7Z4Tuc2rl8uUt7IV0KQY/edit?usp=sharing). To build the model, we follow the steps in the Machine Learning Life Cycle, which include:
+1. Data Extraction
+2. Data Pre-processing
+3. Exploratory Data Analysis
+4. Feature Engineering
+5. Model Building and Evaluation
 
 ### Meta-learner
 We build 2 meta-learners - a company agnostic meta-learner (`final_metalearner.ipynb`), and a meta-learner specific to Apple Inc. (`aapl_metalearner.ipynb`). Model features include predictions from the data sources, technical indicators, seasonal indicators, and the sector the company belongs to. The company agnostic model aims to predict the direction of daily returns of any company in the DJIA index, thus does not include company-specific features. Predictions from Amazon reviews are only included for the Apple Inc. specific meta-learner.
