@@ -27,7 +27,7 @@ Activate the virtual environment as follows:
 ```
 conda activate yourenvname
 ```
-Then, use `requirement.txt` to install the correct versions of the required Python libraries to run the Python code we have written.
+Then, use `requirements.txt` to install the correct versions of the required Python libraries to run the Python code we have written.
 ```
 pip install -r requirements.txt
 ```
