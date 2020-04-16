@@ -14,10 +14,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Download the Files
 1. Create a folder to store all files. Ensure all code and data are stored in same folder.
-2. The codes - Clone this repo to your local machine using `https://github.com/link`.
+2. The codes - Clone this repo to your local machine using `https://github.com/jasmineseah-17/BT4222-Text-Analysis-For-Stock-Returns-Prediction.git`.
 3. The data - Download everything in this <a href="http://recordit.co/" target="_blank">OneDrive folder</a>.
 
-### Install the Required Packages and Lexicons
+### Install the Required Packages, Lexicons, Model and Word Embeddings
 1. Set up virtual environment by entering the following code in the terminal client:
 ```
 conda create -n yourenvname python=3.6 anaconda
@@ -31,7 +31,7 @@ Then, use `requirement.txt` to install the correct versions of the required Pyth
 ```
 pip install -r requirements.txt
 ```
-2. You will need to download the following lexicons which we used to perform NLP. Simply run the code chunk below in your python notebook/ script.
+2. Download the following lexicons which we used to perform NLP. Simply run the code chunk below in your python notebook/ script.
 ``` 
 import nltk
 nltk.download('stopwords')
@@ -41,11 +41,12 @@ nltk.download('averaged_perceptron_tagger')
 nltk.download('words')
 nltk.download('vader_lexicon')
 ```
-3. You will also need to download the following spacy model either on your python notebook/ script.
+3. Download the following spacy model either on your python notebook/ script.
 ```
 import spacy
 !python -m spacy download en_core_web_sm
 ```
+4. Finally, visit the following website: https://nlp.stanford.edu/projects/glove/ and download the file `glove.6B.zip` which contains the GloVe pre-trained word vectors used in our CNN Bi-directional LSTM model. Save this file in the following directory `Analytics/8K SEC/glove.6B`.
 
 ## Running the Codes
 This is a 2-part project - (i) Obtain predictions from individual data sources for the 25 companies, (ii) Combine these predictions with technical and seasonal indicators for the final signal of the daily returns of any company.
