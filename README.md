@@ -1,20 +1,20 @@
-# BT4222-NLP-Project
+# BT4222 Project - Text Analysis for Stock Returns Prediction
 
-In our project, we test whether the use of Natural Language Processing is an effective proxy for both long- and short-term fundamental drivers that can potentially improve existing quantitative trading strategies in the DJIA space. We have excluded 5 of the 30 constituents of the Dow Jones Industrial Average (DJIA) - Caterpillar, Disney, Dow Inc, Travelers Companies and Walgreens Boots Alliance due to data quality issues. We transform unstructured textual data into a structured, machine readable format, apply analytics to understand drivers behind stock returns, and make predictions based on these relationships using machine learning. We used 5 different data sources - 
+Increasingly, the use of textual data has become prevalent as they contain material information that is indicative of a company’s performance (Y Kim et al., 2014), and have potential to be valuable fundamental predictors on how stock prices will be affected. We hypothesise the effectiveness of using textual data as short term and long term drivers of stock returns to achieve superior returns from trading. Our project builds a universal model that predicts the daily returns of any Dow Jones Industrial Average (DJIA) company by combining the predictions of multiple textual data that use different returns horizons. 
+
+We use the time period of 1 Jan 2010 to 31 Dec 2017 as our training set for supervised learning, and 1 Jan 2018 to 31 Dec 2019 as our testing period. 5 of the 30 constituents of the Dow Jones Industrial Average (DJIA) - Caterpillar, Disney, Dow Inc, Travelers Companies and Walgreens Boots Alliance - are excluded due to data quality issues. We transform unstructured textual data into a structured, machine readable format, apply analytics to understand drivers behind stock returns, and make predictions based on these relationships using supervised machine learning. We use 5 different data sources:
 1. __Annual reports (10K) and quarterly reports (10Q)__ capture longer term fundamental insights
 2. __Event filings (8K)__ capture changing fundamentals in real time
 3. __Financial news__ capture how news of fundamentals are interpreted and disseminated
 4. __Tweets__ capture existing sentiments and public opinion
 5. __Amazon reviews__ capture how well consumers react to company products which is indicative of the success of revenue streams. The Amazon product review is limited to Apple for our proof of concept. 
 
-By utilising sentiment analysis and NLP features from these textual data sources with other technical indicators, we aim to better predict the daily returns of companies. A decrease in sentiment obtained from the text data suggests a bleaker company outlook and potential, thus decreasing the stock price. Conversely, if sentiment is positive, the stock price is likely to increase.  We use the time period of 1 Jan 2010 to 31 Dec 2017 as our training set to optimise on, and 1 Jan 2018 to 31 Dec 2019 as our testing period. 
-
 ## Setting Up
-These instructions will get you a copy of the project up and running on your local machine. Please refer to <a href="http://recordit.co/" target="_blank">this data_files_documentation.docx</a> for the description of each file.
+These instructions will get you a copy of the project up and running on your local machine. Please refer to <a href="http://recordit.co/" target="_blank">this data_files_documentation</a> for the description of each file.
 
 ### Download the Files
 1. Create a folder to store all files. Ensure all code and data are stored in same folder.
-2. The codes - Clone this repo to your local machine using `https://github.com/jasmineseah-17/BT4222-Text-Analysis-For-Stock-Returns-Prediction.git`.
+2. The codes - Clone this repo to your local machine using this URL `https://github.com/jasmineseah-17/BT4222-Text-Analysis-For-Stock-Returns-Prediction.git`.
 3. The data - Download everything in this <a href="http://recordit.co/" target="_blank">OneDrive folder</a>.
 
 ### Install the Required Packages, Lexicons, Model and Word Embeddings
@@ -22,12 +22,12 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 conda create -n yourenvname python=3.6 anaconda
 ``` 
-Then press `y` to proceeed. This will install the Python version, and all the associated anaconda packaged libraries at `path_to_your_anaconda_location/anaconda/envs/yourenvname`.
+&ensp;&ensp;Then press `y` to proceeed. This will install the Python version, and all the associated anaconda packaged libraries at `path_to_your_anaconda_location/anaconda/envs/yourenvname`.
 Activate the virtual environment as follows:
 ```
 conda activate yourenvname
 ```
-Then, use `requirements.txt` to install the correct versions of the required Python libraries to run the Python code we have written.
+&ensp;&ensp;Then, use `requirements.txt` to install the correct versions of the required Python libraries to run the Python code we have written.
 ```
 pip install -r requirements.txt
 ```
@@ -52,17 +52,29 @@ import spacy
 This is a 2-part project - (i) Obtain predictions from individual data sources for the 25 companies, (ii) Combine these predictions with technical and seasonal indicators for the final signal of the daily returns of any company.
 
 ### Individual Model for each Data Source
-The 5 data sources (10K/Q, 8K, financial news, tweets, and Amazon reviews) individually predict the daily returns of the 25 DJIA companies. File naming conventions are standardised across all files. For more details, refer to this documentation here. To build the model, we followed the steps in the Machine Learning Life Cycle, which include:
+The 5 data sources (10K/Q, 8K, financial news, tweets, and Amazon reviews) individually predict the daily returns of the 25 DJIA companies. File naming conventions are standardised across all files. For more details, refer to this documentation here. To build the model, we follow the steps in the Machine Learning Life Cycle, which include:
 1. Data Extraction via `extraction.py`
 2. Data Pre-processing via `cleaning.py`
 3. Exploratory Data Analysis via `model_building.ipynb`
 4. Feature Engineering via `model_building.ipynb`
 5. Model Building and Evaluation via `model_building.ipynb`
 
-### Metalearner
-We built 2 metalearners - a company agnostic metalearner (`final_metalearner.ipynb`), and a metalearner specific to Apple Inc. (`aapl_metalearner.ipynb`). Model features include predictions from the data sources, technical indicators, seasonal indicators, and the sector the company belongs to. The company agnostic model aims to predict the direction of daily returns of any company in the DJIA index, thus does not include company-specific features. Predictions from Amazon reviews are only included for the Apple Inc. specific metalearner.
+### Meta-learner
+We build 2 meta-learners - a company agnostic meta-learner (`final_metalearner.ipynb`), and a meta-learner specific to Apple Inc. (`aapl_metalearner.ipynb`). Model features include predictions from the data sources, technical indicators, seasonal indicators, and the sector the company belongs to. The company agnostic model aims to predict the direction of daily returns of any company in the DJIA index, thus does not include company-specific features. Predictions from Amazon reviews are only included for the Apple Inc. specific meta-learner.
 
-For more details on the exact features used in the metalearner, refer to `join_sources.ipynb` which concatenates all features to form the input for the metalearners.
+For more details on the exact features used in the meta-learner, refer to `join_sources.ipynb` which concatenates all features to form the input for the meta-learners.
+
+### Evaluate Meta-learner via Backtest
+We use the following metrics to evaluate the meta-learners:
+
+| __Data Science Metrics__ | __Business Metrics__  |
+| :------- | :--- |
+| Accuracy | Sharpe Ratio |
+| F1-score | Annualised Returns |
+| Precision | Annualised Volatility |
+| Recall | Maximum Drawdown |
+
+Our benchmark of a good model is one that beats the long-only investment returns. From the data science performance metrics, the long-only portfolio performs better. However, from a business perspective, both the company agnostic and AAPL specific meta-learners greatly outperform the long-only model. For the exact figures, refer to `Backtest.ipynb` and `Backtest-Apple.ipynb` respectively.
 
 ## Authors
 
