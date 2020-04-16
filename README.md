@@ -10,7 +10,7 @@ We use the time period of 1 Jan 2010 to 31 Dec 2017 as our training set for supe
 5. __Amazon reviews__ capture how well consumers react to company products which is indicative of the success of revenue streams. The Amazon product review is limited to Apple for our proof of concept. 
 
 ## Setting Up
-These instructions will get you a copy of the project up and running on your local machine. Please refer to <a href="http://recordit.co/" target="_blank">this data_files_documentation</a> for the description of each file.
+These instructions will get you a copy of the project up and running on your local machine. Please refer to <a href="https://github.com/jasmineseah-17/BT4222-Text-Analysis-For-Stock-Returns-Prediction/blob/master/Data%20Files%20Documentation.pdf" target="_blank">this documentation</a> for the description of each file.
 
 ### Download the Files
 1. Create a folder to store all files. Ensure all code and data are stored in same folder.
@@ -52,7 +52,7 @@ import spacy
 This is a 2-part project - (i) Obtain predictions from individual data sources for the 25 companies, (ii) Combine these predictions with technical and seasonal indicators for the final signal of the daily returns of any company.
 
 ### Individual Model for each Data Source
-The 5 data sources (10K/Q, 8K, financial news, tweets, and Amazon reviews) individually predict the daily returns of the 25 DJIA companies. File naming conventions are standardised across all files. For more details, refer to this documentation [here](https://docs.google.com/document/d/1sGOlJ3bLdQbcuVzejfeYV9F7Z4Tuc2rl8uUt7IV0KQY/edit?usp=sharing). To build the model, we follow the steps in the Machine Learning Life Cycle, which include:
+The 5 data sources (10K/Q, 8K, financial news, tweets, and Amazon reviews) individually predict the daily returns of the 25 DJIA companies. File naming conventions are standardised across all files. For more details, refer to <a href="https://github.com/jasmineseah-17/BT4222-Text-Analysis-For-Stock-Returns-Prediction/blob/master/Data%20Files%20Documentation.pdf" target="_blank">this documentation</a>. To build the model, we follow the steps in the Machine Learning Life Cycle, which include:
 1. Data Extraction
 2. Data Pre-processing
 3. Exploratory Data Analysis
