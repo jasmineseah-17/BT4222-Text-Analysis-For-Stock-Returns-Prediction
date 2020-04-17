@@ -1,27 +1,26 @@
 # BT4222 Project - Text Analysis for Stock Returns Prediction
 
-Increasingly, the use of textual data has become prevalent as they contain material information that is indicative of a company’s performance (Y Kim et al., 2014), and have potential to be valuable fundamental predictors on how stock prices will be affected. We hypothesise the effectiveness of using textual data as short term and long term drivers of stock returns to achieve superior returns from trading. Our project builds a universal model that predicts the daily returns of any Dow Jones Industrial Average (DJIA) company by combining the predictions of multiple textual data that use different returns horizons. 
+Increasingly, the use of textual data has become prevalent as they contain material information that is indicative of a company’s performance (Y Kim et al., 2014), and have potential to be valuable fundamental predictors on how stock prices will be affected. We hypothesise the effectiveness of using textual data as short term and long term drivers of stock returns to achieve superior returns from trading. Our project builds a universal model that predicts the daily returns of any Dow Jones Industrial Average (DJIA) company by combining the predictions of multiple textual data that use different returns horizons.
 
 We use the time period of 1 Jan 2010 to 31 Dec 2017 as our training set for supervised learning, and 1 Jan 2018 to 31 Dec 2019 as our testing period. 5 of the 30 constituents of the Dow Jones Industrial Average (DJIA) - Caterpillar, Disney, Dow Inc, Travelers Companies and Walgreens Boots Alliance - are excluded due to data quality issues. We transform unstructured textual data into a structured, machine readable format, apply analytics to understand drivers behind stock returns, and make predictions based on these relationships using supervised machine learning. We use 5 different data sources:
 1. __Annual reports (10K) and quarterly reports (10Q)__ capture longer term fundamental insights
 2. __Event filings (8K)__ capture changing fundamentals in real time
 3. __Financial news__ capture how news of fundamentals are interpreted and disseminated
 4. __Tweets__ capture existing sentiments and public opinion
-5. __Amazon reviews__ capture how well consumers react to company products which is indicative of the success of revenue streams. The Amazon product review is limited to Apple for our proof of concept. 
+5. __Amazon reviews__ capture how well consumers react to company products which is indicative of the success of revenue streams. The Amazon product review is limited to Apple for our proof of concept.
 
 ## Setting Up
 These instructions will get you a copy of the project up and running on your local machine. Please refer to <a href="https://github.com/jasmineseah-17/BT4222-Text-Analysis-For-Stock-Returns-Prediction/blob/master/Data%20Files%20Documentation.pdf" target="_blank">this documentation</a> for the description of each file.
 
 ### Download the Files
-1. Create a folder to store all files. Ensure all code and data are stored in same folder.
-2. The codes - Clone this repo to your local machine using this URL `https://github.com/jasmineseah-17/BT4222-Text-Analysis-For-Stock-Returns-Prediction.git`.
-3. The data - Download everything in this <a href="http://recordit.co/" target="_blank">OneDrive folder</a>.
+1. The zipped version of our data files are ~4 Gigabytes large and are not able to include it in this project. Hence, we provide a Google Drive link where you can download the Jupyter Notebooks as well as the data files in the correct format.
+3. This repo contains the Jupyter Notebooks alone, you can use this google drive link `https://drive.google.com/open?id=1H14Us94oW12P2cFqY90FVIVeXw5jykr7` to obtain the full project with data and code, already formatted.
 
 ### Install the Required Packages, Lexicons, Model and Word Embeddings
 1. Set up virtual environment by entering the following code in the terminal client:
 ```
 conda create -n yourenvname python=3.6 anaconda
-``` 
+```
 &ensp;&ensp;Then press `y` to proceeed. This will install the Python version, and all the associated anaconda packaged libraries at `path_to_your_anaconda_location/anaconda/envs/yourenvname`.
 Activate the virtual environment as follows:
 ```
@@ -32,7 +31,7 @@ conda activate yourenvname
 pip install -r requirements.txt
 ```
 2. Download the following lexicons which we used to perform NLP. Simply run the code chunk below in your python notebook/ script.
-``` 
+```
 import nltk
 nltk.download('stopwords')
 nltk.download('punkt')
