@@ -14,7 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Download the Files
 1. The zipped version of our data files are ~4 Gigabytes large and are not able to include it in this project. Hence, we provide a Google Drive link where you can download the Jupyter Notebooks as well as the data files in the correct format.
-3. This repo contains the Jupyter Notebooks alone, you can use this google drive link `https://drive.google.com/open?id=1H14Us94oW12P2cFqY90FVIVeXw5jykr7` to obtain the full project with data and code, already formatted.
+3. This repo contains the Jupyter Notebooks alone, you can use this [google drive link](https://drive.google.com/open?id=1H14Us94oW12P2cFqY90FVIVeXw5jykr7) to obtain the full project with data and code, already formatted.
 
 ### Install the Required Packages, Lexicons, Model and Word Embeddings
 1. Set up virtual environment by entering the following code in the terminal client:
